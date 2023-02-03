@@ -18,5 +18,8 @@ class Menu(models.Model):
    price = models.IntegerField()
    menu_item_description = models.TextField(max_length=1000, default='')
 
+   class Meta:
+      ordering = ['name',]
+
    def __str__(self):
       return self.name
